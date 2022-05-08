@@ -7,14 +7,14 @@ MACRO(KCDDB_EXECUTABLE_TESTS)
        FOREACH(_testname ${ARGN})
                kde4_add_executable(${_testname} TEST ${_testname}.cpp)
                target_link_libraries(${_testname} ${KDE4_KDEUI_LIBS}
-                                     ${QT_QTTEST_LIBRARY} kcddb)
+                                     Qt4::QtTest kcddb)
        ENDFOREACH(_testname)
 ENDMACRO(KCDDB_EXECUTABLE_TESTS)
 MACRO(KCDDB_UNIT_TESTS)
        FOREACH(_testname ${ARGN})
                kde4_add_unit_test(${_testname} TESTNAME kcddb-${_testname} ${_testname}.cpp)
                target_link_libraries(${_testname} ${KDE4_KDEUI_LIBS}
-                                     ${QT_QTTEST_LIBRARY} kcddb)
+                                     Qt4::QtTest kcddb)
        ENDFOREACH(_testname)
 ENDMACRO(KCDDB_UNIT_TESTS)
 
