@@ -37,7 +37,7 @@ endif(MUSICBRAINZ5_FOUND)
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-musicbrainz.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-musicbrainz.h )
 
-add_subdirectory( test )
+macro_optional_add_subdirectory( test )
 add_subdirectory( kcmcddb )
 add_subdirectory( libkcddb )
 
