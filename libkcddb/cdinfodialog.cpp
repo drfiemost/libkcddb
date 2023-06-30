@@ -114,7 +114,7 @@ class CDInfoDialog::Private
 //       }
   }
 
-  void CDInfoDialog::slotTrackDoubleClicked(const QModelIndex &index)
+  void CDInfoDialog::slotTrackDoubleClicked([[maybe_unused]] const QModelIndex &index)
   {
 //       d->ui->m_trackList->editItem(item);
   }
