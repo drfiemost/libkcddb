@@ -33,11 +33,7 @@
 #include <klocale.h>
 #include <kinputdialog.h>
 #include <kmessagebox.h>
-#ifndef KDE_NO_DEPRECATED
-#include <keditlistbox.h>
-#else
 #include <keditlistwidget.h>
-#endif
 #include <kurlrequester.h>
 #include <QCheckBox>
 
@@ -60,11 +56,7 @@ CDDBConfigWidget::CDDBConfigWidget(QWidget * parent)
   QVBoxLayout* gbLayout = new QVBoxLayout(groupBox);
   gbLayout->setMargin(0);
 
-#ifndef KDE_NO_DEPRECATED
-  KEditListBox* editListWidget = new KEditListBox(groupBox);
-#else
   KEditListWidget* editListWidget = new KEditListWidget(groupBox);
-#endif
   editListWidget->setCustomEditor(urlReq->customEditor());
   editListWidget->setObjectName(QString::fromLatin1("kcfg_cacheLocations"));
   gbLayout->addWidget(editListWidget);
