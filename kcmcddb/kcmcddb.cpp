@@ -32,7 +32,7 @@
 #include <kconfig.h>
 #include <klocale.h>
 #include <kglobal.h>
-#include <kgenericfactory.h>
+#include <kpluginfactory.h>
 #include <kmessagebox.h>
 #include <kconfigdialogmanager.h>
 
